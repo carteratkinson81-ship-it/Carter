@@ -178,7 +178,16 @@ In high school, I volunteered in a variety of different ways, including blood dr
         <div class="projects">
             <div>
                 <h3>Discovery Project</h3>
-                <p>.</p>
+                <p>My discovery project idea was to develop an FIR (finite impulse response) band pass filter in MATLAB that could take in a signal and display the filtered version of the signal in a plot. I got this idea through a combination of two experiences: my labs in ECE 2026 (which are purely MATLAB), and my internship last summer (where I initially learned what a band pass filter is).
+The first step in my process was researching online for the inevitably existing iterations of this idea by other people to see what the general process of development is. I eventually settled on the tutorial MATLAB provides on their website, which gives some different examples of ways to design the filter and explains each aspect. Using this as a reference, I was able to code my own filter. 
+I also had to use knowledge that I learned from taking ECE 2026 this semester, specifically information about sampling signals. Filtering a signal involves sampling it, and to avoid aliasing I had to pick a sampling rate that would be more than twice the highest frequency contained in the example signal. Also, a band pass filter is a combination of a low pass filter and a high pass filter, so I had to pick an upper and lower bound for the frequency I wanted to let through the filter.
+I had an initial design for the code that did not work correctly. In particular, the signal was not properly filtered and was phase shifted. This was a common issue that I was able to solve relatively easily by looking online for solutions. I settled on the MATLAB function “filtfilt”, which prevented phase distortion in the filtered signal.
+The main drawback of my filter design is that the code would need to be altered in a few places depending on what the input signal is and what frequencies you want to filter out. I could have potentially made the code more generalized so that it would work given any signal. For example, the sampling rate needs to be more than twice the highest frequency in the signal. Right now, I have the sampling rate set to a certain value, but this could be changed to be more generalized if I was more skilled with coding in MATLAB.
+Doing this project greatly improved my understanding of the design of band pass filters, as well as my proficiency in MATLAB. I learned two new functions in MATLAB, namely “filtfilt” and “butter”, which are both used to construct filters. Filtfilt prevents phase distortion when filtering, and butter actually constructs the IIR filter.
+My overall experience with this project was very positive, as I encountered few drawbacks in the design process. This project would be most related to the signal information processing thread, which I was not planning on picking as one of my threads. Doing this project had not changed my interests, so I will likely still not choose this as one of my threads. Since the project completes its intended function well, I would not intend to continue it in the future.
+</p>
+				<img src="ece1100matlabcode.png" width="200">
+				<img src="ece1100matlabcode2.png" width="200">
             </div>
             
         </div>
@@ -190,3 +199,4 @@ In high school, I volunteered in a variety of different ways, including blood dr
     </footer>
 </body>
 </html>
+
